@@ -60,7 +60,7 @@ Install Rust and Cargo from [rustup](https://rustup.rs/), then clone or download
 cargo build
 ```
 
-For an optimized build:
+Important: For an optimized build:
 
 ```bash
 cargo build --release
