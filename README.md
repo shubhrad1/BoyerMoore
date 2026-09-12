@@ -17,11 +17,11 @@ $$P = p_0p_1\dots p_{m-1},$$
 
 the table stores a shift value for each character. For an occurrence of character $c$ at position $i$, the shift is
 
-$$\operatorname{shift}(c) = \max(1, m - i - 1).$$
+$$\text{shift}(c) = \max(1, m - i - 1).$$
 
 The rightmost occurrence of a character determines its final shift because later occurrences overwrite earlier entries in the table. If a mismatch occurs while comparing the text character $t$ with the pattern character $p_j$, the search advances by the shift associated with the mismatching pattern character:
 
-$$s \leftarrow s + \operatorname{shift}(p_j).$$
+$$s \leftarrow s + \text{shift}(p_j).$$
 
 Here, $s$ is the current alignment of the pattern against the text. Matching proceeds from $p_{m-1}$ toward $p_0$. Once every character matches, the line is reported and the search moves to the next line.
 
